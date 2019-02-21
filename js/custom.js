@@ -1,12 +1,12 @@
 var awardsText =  {
 	'awards/a1.jpg':"<h4>A meaningful salutations through dance : Prajavani news paper - Nanjundrao</h4>",
-	'awards/a2.jpg':"",
+	'awards/a2.jpg':"<h4>'Nauka Charitam' directed by Guru Padmini Ravi</h4>",
 	'awards/a3.jpg':"<h4>A show that enhances your love for Indian culture :</h4>",
 	'awards/a4.jpg':"<h4>'Krishnapremi' - a dance fest which opened the doors of experimentations :</h4>",
-	'awards/a5.jpg':"",
-	'awards/a6.jpg':"",
+	'awards/a5.jpg':"<h4>A strong proclamation of 'Guru Shisya parampara'</h4>",
+	'awards/a6.jpg':"<h4> Bharatanatyam exponent Pratibha Prahlad leaves audience and thrall</h4>",
 	'awards/a7.jpg':"<h4>Set the stage on fire through his dynamic bharatanatyam for the theme 'Agni' - Subbu Kriahna</h4>",	
-	'awards/a8.jpg':"",
+	'awards/a8.jpg':"<h4>Performed  at Koviayil thiruvaiyaru festival</h4>",
 }
 
 function createGallery(){
