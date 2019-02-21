@@ -45,6 +45,7 @@ function createAwards(){
 		var photoDiv = document.createElement('div')
 		photoDiv.className = "gallery_image_div"
 		var imgHTML = '<img class= "gallery-img" src="awards/a'+i+'.jpg" onclick="AwardsImageClicked(this)">';
+		
 		photoDiv.innerHTML = imgHTML;
 		parentElement.appendChild(photoDiv)
 	}
