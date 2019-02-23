@@ -1,0 +1,16 @@
+<form id="fr1" action="vijaylaxmi.kreedaloka@gmail.com">
+    <input type="text" id="tb1" />
+    <input type="text" id="tb2" />
+    <input type="button" id="bt1" value="click" />
+</form>
+
+<script>
+$(document).ready(function() {
+    $('#bt1').click(function() {
+        $('#fr1').attr('action',
+                       'mailto:vijaylaxmi.kreedaloka@gmail.com?subject=' +
+                       $('#tb1').val() + '&body=' + $('#tb2').val());
+        $('#fr1').submit();
+    });
+});
+</script>
