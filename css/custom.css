@@ -37,16 +37,18 @@ iframe {
 }
 
 @media screen and (max-width: 750px) {
-    iframe {
-        max-width: 100% !important;
-        width: auto !important;
-        height: auto !important;
-    }
+    
 
     
 }
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
+@media only screen and (max-width: 768px) /* For mobile phones: */{
+  
+  iframe {
+        max-width: 100% !important;
+        width: auto !important;
+        height: auto !important;
+  }
+
   .gallery_image_div {
     	width:100% !important;
    }
