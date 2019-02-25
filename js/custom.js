@@ -8,6 +8,13 @@ var awardsText =  {
 	'awards/a7.jpg':"Set the stage on fire through his dynamic bharatanatyam for the theme 'Agni' - Subbu Kriahna",	
 	'awards/a8.jpg':"Performed  at Koviayil thiruvaiyaru festival",
 }
+var device = 'desktop'
+var width = (window.innerWidth > 0) ? window.innerWidth : document.documentElement.clientWidth;
+if(width > 1024){
+	device = 'desktop'
+} else {
+	device = 'mobile'
+}  
 
 function createGallery(){
 	var parentElement = document.getElementById('gallery_content')
@@ -22,15 +29,17 @@ function createGallery(){
 	}
 }
 function galleryImageClicked(el){
-	var imgSrc = el.getAttribute('src');
-	var popovermodal = document.getElementById('popover_modal');
-	var popoveModalContent = document.getElementById('popover_image_container');
-	var popoverHeading = document.getElementById('popover_heading');
-	popoverHeading.innerHTML = ""
-	var imgHTML = '<img src = "'+imgSrc+'">'
-	popoveModalContent.innerHTML = imgHTML
-	
-	$('#popover_modal').fadeIn()
+	if (device == 'desktop') {
+		var imgSrc = el.getAttribute('src');
+		var popovermodal = document.getElementById('popover_modal');
+		var popoveModalContent = document.getElementById('popover_image_container');
+		var popoverHeading = document.getElementById('popover_heading');
+		popoverHeading.innerHTML = ""
+		var imgHTML = '<img src = "'+imgSrc+'">'
+		popoveModalContent.innerHTML = imgHTML
+		
+		$('#popover_modal').fadeIn()
+	}
 }
 
 function close_modal() {
@@ -52,14 +61,16 @@ function createAwards(){
 	}
 }
 function AwardsImageClicked(el){
-	var imgSrc = el.getAttribute('src');
-	var popovermodal = document.getElementById('popover_modal');
-	var popoveModalContent = document.getElementById('popover_image_container');
-	var popoverHeading = document.getElementById('popover_heading');
-	popoverHeading.innerHTML = awardsText[imgSrc]
-	var imgHTML = '<img src = "'+imgSrc+'">'
-	popoveModalContent.innerHTML = imgHTML
-	$('#popover_modal').fadeIn()	
+	if (device == 'desktop') {
+		var imgSrc = el.getAttribute('src');
+		var popovermodal = document.getElementById('popover_modal');
+		var popoveModalContent = document.getElementById('popover_image_container');
+		var popoverHeading = document.getElementById('popover_heading');
+		popoverHeading.innerHTML = awardsText[imgSrc]
+		var imgHTML = '<img src = "'+imgSrc+'">'
+		popoveModalContent.innerHTML = imgHTML
+		$('#popover_modal').fadeIn()	
+	}
 }
 
 function sendEmail() {
