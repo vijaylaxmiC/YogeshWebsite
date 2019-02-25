@@ -1,5 +1,10 @@
+body {
+  font -font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !important;
+  color: #323232 !important;
+}
+
 .nice_font{
-    font-family:sarif;
+    
 }
 
 #mainNav {
@@ -21,12 +26,23 @@ iframe {
 	display: block;
 }
 
+@media screen and (min-width: 980px) /* Desktop */ {
+  section {
+    padding: 70px !important;
+    min-height: 100vh
+  }
+  #myCarousel, .carousel-inner {
+    max-height: 100vh !important;
+  }
+}
+
 @media screen and (max-width: 750px) {
     iframe {
         max-width: 100% !important;
         width: auto !important;
         height: auto !important;
     }
+
     
 }
 @media only screen and (max-width: 768px) {
@@ -41,7 +57,6 @@ iframe {
   }
 
 }
-
 
 .gallery-img {
 	width:100% ;
