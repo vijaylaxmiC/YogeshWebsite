@@ -19,7 +19,19 @@ if(width > 1024){
 function createGallery(){
 	var parentElement = document.getElementById('gallery_content')
 	
-	for (var i=1; i<=40; i++) {
+	for (var i=1; i<=3; i++) {
+		var photoDiv = document.createElement('div')
+		photoDiv.className = "gallery_image_div"
+		var imgHTML = '<img class= "gallery-img" src="gallery/yogi'+i+'.jpg" onclick="galleryImageClicked(this)">';
+		photoDiv.innerHTML = imgHTML;
+
+		parentElement.appendChild(photoDiv)
+	}
+}
+function createNewGallery(){
+	var parentElement = document.getElementById('gallery_content_more')
+	
+	for (var i=4; i<=40; i++) {
 		var photoDiv = document.createElement('div')
 		photoDiv.className = "gallery_image_div"
 		var imgHTML = '<img class= "gallery-img" src="gallery/yogi'+i+'.jpg" onclick="galleryImageClicked(this)">';

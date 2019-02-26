@@ -46,14 +46,26 @@
           emailjs.init("user_QDOk1NIBRxTRPduE78yeD");
        })();
     </script>
-
+	<!--
+	<style>
+	.carousel-inner>.item {
+		-webkit-transition: 0.01s ease-in-out left;
+		 transition: 0.01s ease-in-out left;
+		-webkit-transition: 0.01s, ease-in-out, left;
+		-moz-transition: 0.01s, ease-in-out, left;
+		-o-transition: 0.01s, ease-in-out, left;
+		 transition: 0.01s, ease-in-out, left;
+	}
+	</style>-->
    
 
   </head>
 
   <body id="page-top">
 
+  <div id="includedContent"> </div>
     <!-- Navigation -->
+	<!--
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" id="navbar_title" href="#page-top">Yogesh kumar</a>
@@ -95,43 +107,43 @@
           </ul>
       
       </div>
-    </nav>
+    </nav>-->
 
     <!-- Header -->
     <header class="masthead" id="home">
 
-   <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-      <li data-target="#myCarousel" data-slide-to="3"></li>
-      <li data-target="#myCarousel" data-slide-to="4"></li>
-    </ol>
+	   <div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+		  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		  <li data-target="#myCarousel" data-slide-to="1"></li>
+		  <li data-target="#myCarousel" data-slide-to="2"></li>
+		  <li data-target="#myCarousel" data-slide-to="3"></li>
+		  <li data-target="#myCarousel" data-slide-to="4"></li>
+		</ol>
 
-    <!-- Wrapper for slides -->
-     <div class="carousel-inner">
-      <div class="item active">
-        <img src="home/home1.jpg" alt="Los Angeles" style="width:100%;">
-      </div>
+		<!-- Wrapper for slides -->
+		 <div class="carousel-inner">
+		  <div class="item active">
+			<img src="home/home1.jpg" alt="Los Angeles" style="width:100%;">
+		  </div>
 
-      <div class="item">
-        <img src="home/home2.jpg" alt="Chicago" style="width:100%;">
-      </div>
-    
-      <div class="item">
-        <img src="home/home3.jpg" alt="New york" style="width:100%;">
-      </div>
+		  <div class="item">
+			<img src="home/home2.jpg" alt="Chicago" style="width:100%;">
+		  </div>
+		
+		  <div class="item">
+			<img src="home/home3.jpg" alt="New york" style="width:100%;">
+		  </div>
 
-      <div class="item">
-        <img src="home/home4.jpg" alt="Chicago" style="width:100%;">
-      </div>
-    
-      <div class="item">
-        <img src="home/home5.jpg" alt="New york" style="width:100%;">
-      </div>
-    </div>
+		  <div class="item">
+			<img src="home/home4.jpg" alt="Chicago" style="width:100%;">
+		  </div>
+		
+		  <div class="item">
+			<img src="home/home5.jpg" alt="New york" style="width:100%;">
+		  </div>
+		</div>
 
     <!-- Left and right controls -->
 		<a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -142,7 +154,7 @@
 		  <span class="glyphicon glyphicon-chevron-right"></span>
 		  <span class="sr-only">Next</span>
 		</a>
-	</div>
+		</div>
  
       
     </header>
@@ -304,6 +316,7 @@
         
           <!-- DYNAMIIC IMAGES WILL BE LOADED HERE FROM JAVASCRIPT-->
         </div>
+		<a href="gallery.html">more</a>
       </div>
     </section>
 
@@ -814,19 +827,30 @@
 
     <!-- Custom scripts for this template -->
    <script src="js/agency.min.js"></script>
-   <!--
-   <script type="text/javascript">
+   
+  <!-- <script type="text/javascript">
      $(document).ready(function() {
       $('#myCarousel').carousel({
-        interval: 3,
-        cycle: true
+        interval:3,
+        cycle:true
       }); 
      });
    </script>-->
+   <script type="text/javascript">
+$(document).ready(function(){
+//alert('hi');
+     $("#myCarousel").carousel({
+         interval : 5000000,
+         //pause: false
+     });
+});
+</script>
    <script>
    window.onload = function(){
     createGallery()
+	
      createAwards()
+	 
    }
    </script>
    <script>
@@ -841,7 +865,7 @@ $(document).ready(function(){
     $("button").click(function(){
       $.post("http://45.249.111.22:9090/admin-module/sendSupport",
       {
-         name    : $('#name').val(),
+       name    : $('#name').val(),
        email   : $('#email').val(),
        phoneno : $('#phone').val(),
        message : $('#message').val(),
@@ -857,6 +881,12 @@ $(document).ready(function(){
     });
   });
 </script>
+
+ <script> 
+    $(function(){
+      $("#includedContent").load("header.html"); 
+    });
+  </script> 
 
 </body>
 
