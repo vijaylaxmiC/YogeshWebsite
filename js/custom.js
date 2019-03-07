@@ -28,7 +28,7 @@ function createGallery(){
 		parentElement.appendChild(photoDiv)
 	}
 }
-function createNewGallery(){
+function createMoreGallery(){
 	var parentElement = document.getElementById('gallery_content_more')
 	
 	for (var i=4; i<=40; i++) {
@@ -62,6 +62,18 @@ function close_modal() {
 
 function createAwards(){
 	var parentElement = document.getElementById('awards_content')
+	for (var i=1; i<=3; i++) {
+		var photoDiv = document.createElement('div')
+		photoDiv.className = "gallery_image_div"
+		var imgHeading = 'awards/a'+i+'.jpg'
+		var imgHTML = '<p class ="award_heading">'+awardsText[imgHeading]+'</p>'
+		imgHTML += '<img class= "gallery-img" src="awards/a'+i+'.jpg" onclick="AwardsImageClicked(this)">';
+		photoDiv.innerHTML = imgHTML;
+		parentElement.appendChild(photoDiv)
+	}
+}
+function createMoreAwards(){
+	var parentElement = document.getElementById('awards_content_more')
 	for (var i=1; i<=8; i++) {
 		var photoDiv = document.createElement('div')
 		photoDiv.className = "gallery_image_div"
