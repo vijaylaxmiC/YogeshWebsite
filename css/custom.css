@@ -29,6 +29,17 @@ iframe {
 	margin:0 auto;
 	display: block;
 }
+#moreGalleryButtton {
+  padding: 15px;
+    background-color: darkorchid;
+    color: white;
+    border-radius: 13px;
+    text-decoration: none;
+}
+
+#moreGalleryLinkParent {
+  text-align: right
+}
 
 @media screen and (min-width: 980px) /* Desktop */ {
   section {
@@ -63,6 +74,20 @@ iframe {
 
   #navbarResponsive {
     text-align: center;
+    width:100%;
+  }
+  .container {
+    display: inline !important;
+  }
+  #navbar_title {
+    float: left;
+  }
+  #navbar_menu_button {
+    float: right;
+    margin-top:5px;
+  }
+  #moreGalleryLinkParent {
+    text-align: center
   }
 }
 
