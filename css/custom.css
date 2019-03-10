@@ -40,6 +40,10 @@ iframe {
 #moreGalleryLinkParent {
   text-align: right
 }
+.img_event {
+  width:110%;
+  height:100%
+}
 
 @media screen and (min-width: 980px) /* Desktop */ {
   section {
@@ -57,6 +61,10 @@ iframe {
         max-width: 100% !important;
         width: auto !important;
         height: auto !important;
+  }
+  section{
+    padding-left:10px;
+    padding-right:10px;
   }
 
   .gallery_image_div {
@@ -88,6 +96,13 @@ iframe {
   }
   #moreGalleryLinkParent {
     text-align: center
+  }
+  .img_event {
+    width:98%;
+    height:100%
+  }
+  .nice_font {
+    text-align: justify;
   }
 }
 

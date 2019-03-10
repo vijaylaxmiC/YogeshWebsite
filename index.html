@@ -26,13 +26,17 @@
     
 	<!--carousel js and css-->
       
+    <!--<link href="vendor/bootstrap/css/bootstrap.3.3.7.min.css" rel="stylesheet">
+    <script src="vendor/jquery/jquery.3.3.1.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.3.3.7.min.js"></script>-->
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
  
 
     <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!--<script src="vendor/jquery-easing/jquery.easing.min.js"></script>-->
 
     <!-- Contact form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
@@ -119,7 +123,7 @@
     <!-- Header -->
     <header class="masthead" id="home">
 
-	   <div id="myCarousel" class="carousel slide" data-ride="carousel">
+	   <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
 		<!-- Indicators -->
 		<ol class="carousel-indicators">
 		  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -511,27 +515,27 @@
            <!-- <p class="text-muted">-->
            <div class="row">
         <div class="col-md-6">
-          <img src="events/1.jpg" alt="Chicago" style="width:110%;height:100%"/>
+          <img class="img_event" src="events/1.jpg" alt="Chicago"/>
         </div>
         <div class="col-md-6">
-          <img src="events/2.jpg" alt="Chicago" style="width:110%;height:100%"/>
+          <img class="img_event" src="events/2.jpg" alt="Chicago"/>
         </div>
       </div>
       
       <div class="row">
         <div class="col-md-6">
-          <img src="events/5.jpg" alt="Chicago" style="width:110%;height:100%"/>
+          <img class="img_event" src="events/5.jpg" alt="Chicago"/>
         </div>
         <div class="col-md-6">
-          <img src="events/6.jpg" alt="Chicago" style="width:110%;height:100%"/>
+          <img class="img_event" src="events/6.jpg" alt="Chicago"/>
         </div>
       </div>
       <div class="row">
         <div class="col-md-6">
-          <img src="events/3.jpg" alt="Chicago" style="width:110%;height:100%"/>
+          <img class="img_event" src="events/3.jpg" alt="Chicago"/>
         </div>
         <div class="col-md-6">
-          <img src="events/4.jpg" alt="Chicago" style="width:110%;height:100%"/>
+          <img class="img_event" src="events/4.jpg" alt="Chicago"/>
         </div>
       </div>
       
@@ -830,32 +834,14 @@
 
 -->
     <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!--<script src="vendor/jquery-easing/jquery.easing.min.js"></script>-->
 
     <!-- Contact form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
     <script src="js/contact_me.js"></script>
 
     <!-- Custom scripts for this template -->
-   <script src="js/agency.min.js"></script>
-   
-  <!-- <script type="text/javascript">
-     $(document).ready(function() {
-      $('#myCarousel').carousel({
-        interval:3,
-        cycle:true
-      }); 
-     });
-   </script>-->
-   <script type="text/javascript">
-$(document).ready(function(){
-//alert('hi');
-     $("#myCarousel").carousel({
-         interval : 5000000,
-         //pause: false
-     });
-});
-</script>
+
    <script>
    window.onload = function(){
     createGallery()
@@ -890,6 +876,8 @@ $(document).ready(function(){
     $(".nav-item a").click(function(){
       $("#navbarResponsive").removeClass("in");
     });
+
+    $("#myCarousel").carousel({interval: 500});
   });
 </script>
 
