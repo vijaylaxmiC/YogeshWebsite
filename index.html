@@ -37,10 +37,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
- 
-
-    <!-- Plugin JavaScript -->
-    <!--<script src="vendor/jquery-easing/jquery.easing.min.js"></script>-->
 
     <!-- Contact form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
@@ -74,7 +70,7 @@
   <!--<div id="includedContent"> </div>-->
     
 	
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" id="navbar_title" href="#page-top">Yogesh kumar</a>
         <button class="navbar-toggler navbar-toggler-right" id="navbar_menu_button" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -838,50 +834,30 @@
 
 -->
     <!-- Plugin JavaScript -->
-    <!--<script src="vendor/jquery-easing/jquery.easing.min.js"></script>-->
+    <!--jquery.easing.min.js is used for showing easing animation to move to sections on menu items click -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Contact form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
     <script src="js/contact_me.js"></script>
 
     <!-- Custom scripts for this template -->
-
-   <script>
-   window.onload = function(){
-    createGallery()
-	
-     createAwards()
-	 
-   }
-   </script>
-   <script>
-$(document).ready(function(){
-  $('[data-toggle="tooltip"]').tooltip();   
-});
-</script>
+    <!-- agency.min.js is used for response nav bar -->
+    <script src="js/agency.min.js"></script>
 
 <script>    
+  window.onload = function(){
+      createGallery()
+      createAwards()
+  }
 
   $(document).ready(function(){
-    $("button").click(function(){
-      $.post("http://45.249.111.22:9090/admin-module/sendSupport",
-      {
-       name    : $('#name').val(),
-       email   : $('#email').val(),
-       phoneno : $('#phone').val(),
-       message : $('#message').val(),
-      
-      },
-      function(data,status){
-        alert("Data: " + data + "\nStatus: " + status);
-      });
-    });
 
     $(".nav-item a").click(function(){
       $("#navbarResponsive").removeClass("in");
     });
 
-    $("#myCarousel").carousel({interval: 500});
+    $('[data-toggle="tooltip"]').tooltip(); 
   });
 </script>
 
