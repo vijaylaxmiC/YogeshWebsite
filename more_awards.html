@@ -138,6 +138,16 @@
 		
       </div>
 	  </section>
+	  <div id="popover_modal" onclick="close_modal()">
+      <div id="popover_modal_content">
+        <div>
+          <span id="popover_heading"></span>
+          <span id="popover_modal_close_button" onclick="close_modal()">&times;</span>
+        </div>
+        <div id = "popover_image_container">
+        </div>
+      </div>
+	  </div>
 	  
 	   <!-- Footer -->
     <footer>
@@ -194,28 +204,13 @@
     <!-- Custom scripts for this template -->
    <script src="js/agency.min.js"></script>
    
-  <!-- <script type="text/javascript">
-     $(document).ready(function() {
-      $('#myCarousel').carousel({
-        interval:3,
-        cycle:true
-      }); 
-     });
-   </script>-->
-   <script type="text/javascript">
-$(document).ready(function(){
-//alert('hi');
-     $("#myCarousel").carousel({
-         interval : 5000000,
-         //pause: false
-     });
-});
-</script>
+ 
+  
    <script>
    window.onload = function(){
-   // createGallery()
+  
 	createMoreAwards()
-   //  createAwards()
+   
    }
    </script>
    <script>
@@ -230,7 +225,7 @@ $(document).ready(function(){
     $("button").click(function(){
       $.post("http://45.249.111.22:9090/admin-module/sendSupport",
       {
-         name    : $('#name').val(),
+       name    : $('#name').val(),
        email   : $('#email').val(),
        phoneno : $('#phone').val(),
        message : $('#message').val(),
