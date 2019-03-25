@@ -2,6 +2,7 @@ body {
   font -font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !important;
   color: #323232 !important;
 }
+
 html,body
 {
     overflow-x: hidden; 
@@ -165,9 +166,7 @@ iframe {
 #popover_image_container > img {
 	width: 100%;
 	object-fit: cover;
-
 }
-
 #popover_modal_close_button:hover,
 #popover_modal_close_button:focus {
   color: #000;
